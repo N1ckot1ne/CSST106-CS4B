@@ -23,7 +23,7 @@ This repository contains a collection of image processing exercises using OpenCV
 2. Apply the Harris Corner Detection method to identify corners.
 3. Visualize the corners by marking them on the original image.
 
-**Code**: [Harris Corner Detection Code](exercise_1_harris.py)
+**Code**: [Harris Corner Detection Code](4B_VENANCIO_EXER3.ipynb)
 
 ---
 
@@ -36,7 +36,7 @@ This repository contains a collection of image processing exercises using OpenCV
 2. Apply the HOG descriptor to extract features.
 3. Visualize the gradient orientations to understand the structure of the detected object.
 
-**Code**: [HOG Feature Extraction Code](exercise_2_hog.py)
+**Code**: [HOG Feature Extraction Code](4B_VENANCIO_EXER3.ipynb)
 
 ---
 
@@ -49,7 +49,7 @@ This repository contains a collection of image processing exercises using OpenCV
 2. Use the FAST algorithm to detect keypoints.
 3. Visualize the detected keypoints by marking them on the image.
 
-**Code**: [FAST Keypoint Detection Code](exercise_3_fast.py)
+**Code**: [FAST Keypoint Detection Code](4B_VENANCIO_EXER3.ipynb)
 
 ---
 
@@ -63,7 +63,7 @@ This repository contains a collection of image processing exercises using OpenCV
 3. Match features between the two images using the FLANN matcher.
 4. Display the matched features to observe common points between the two images.
 
-**Code**: [ORB and FLANN Feature Matching Code](exercise_4_orb_flann.py)
+**Code**: [ORB and FLANN Feature Matching Code](4B_VENANCIO_EXER3.ipynb)
 
 ---
 
@@ -78,7 +78,7 @@ This repository contains a collection of image processing exercises using OpenCV
 4. Apply the Watershed algorithm to segment the image into regions.
 5. Visualize the segmented regions by marking boundaries between different objects.
 
-**Code**: [Watershed Image Segmentation Code](exercise_5_watershed.py)
+**Code**: [Watershed Image Segmentation Code](4B_VENANCIO_EXER3.ipynb)
 
 ---
 
