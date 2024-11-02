@@ -68,7 +68,8 @@ else:
 
 ```
 
-**Discussion: YOLO's Single-Pass Detection and Real-Time Capabilities
+# Discussion: YOLO's Single-Pass Detection and Real-Time Capabilities
+
 One of the key features of the YOLO (You Only Look Once) architecture is its ability to perform object detection in a single forward pass through the neural network. This characteristic has significant implications for its real-time capabilities:
 
 Speed: YOLO processes images significantly faster than traditional object detection models, which typically involve a two-stage approach (e.g., generating region proposals and then classifying them). The single-pass nature of YOLO allows it to detect multiple objects in one go, leading to lower latency and enabling real-time processing.
@@ -77,4 +78,4 @@ Efficiency: YOLO uses a grid-based approach, dividing the image into a grid and 
 
 Application Suitability: The speed and efficiency of YOLO make it highly suitable for applications requiring immediate feedback, such as video surveillance, autonomous vehicles, and interactive systems. Its ability to operate in real-time is crucial for these applications, where timely and accurate object detection is vital.
 
-Trade-offs: While YOLO's single-pass detection is advantageous for speed, it may sacrifice some accuracy compared to two-stage models, particularly in scenarios with small objects or high-density object arrangements. However, advancements in YOLO versions (like YOLOv5) have significantly improved its accuracy while maintaining fast inference times.**
+Trade-offs: While YOLO's single-pass detection is advantageous for speed, it may sacrifice some accuracy compared to two-stage models, particularly in scenarios with small objects or high-density object arrangements. However, advancements in YOLO versions (like YOLOv5) have significantly improved its accuracy while maintaining fast inference times.
