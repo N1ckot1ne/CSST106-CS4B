@@ -101,7 +101,7 @@ def hog_feature_extraction(image_path="4B_VENANCIO_MATCHING.jpg"):
 
 # Run the function
 hog_feature_extraction()
-'''
+```
 
 # **ORB Feature Matching**
 This Python script demonstrates how to perform ORB (Oriented FAST and Rotated BRIEF) feature extraction and feature matching between two images using the FLANN-based matcher. ORB is a computationally efficient alternative to SIFT and SURF and is widely used in real-time applications due to its speed and robustness.
