@@ -31,3 +31,68 @@ datasets/
     ├── train2017.zip       # Original zip file (optional to keep)
     └── train2017/          # Extracted images
 ```
+# **Implementing HOG-SVM**
+This project demonstrates how to use the HOG (Histogram of Oriented Gradients) descriptor and a pre-trained SVM detector in OpenCV to detect people in an image.
+
+**Requirements**
+* Python (>=3.6 recommended)
+* OpenCV (cv2)
+
+**Setup**
+1. Install OpenCV. 
+
+```python
+pip install opencv-python
+```
+2. Prepare an Input Image. Place an example image at datasets/coco/processed/example_image.jpg or update the image_path variable in the code with the path to your desired image.
+
+**How it Works**
+The code initializes a HOG descriptor, sets up a pre-trained SVM detector for human detection, and then processes the specified image to detect people. Detected people are highlighted with bounding boxes.
+
+Code Explanation
+```python
+import cv2
+
+# Initialize HOG descriptor and set SVM detector
+hog = cv2.HOGDescriptor()
+hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+
+# Load an example image and perform detection
+image_path = "datasets/coco/processed/example_image.jpg"
+image = cv2.imread(image_path)
+
+if image is None:
+    print(f"Error: Unable to load image at {image_path}")
+else:
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Detect people in the image
+    boxes, weights = hog.detectMultiScale(gray, winStride=(8, 8))
+
+    # Draw bounding boxes around detected people
+    for (x, y, w, h) in boxes:
+        cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+
+    # Save the output image
+    cv2.imwrite("output.jpg", image)
+```
+
+**Key Points**
+* **HOG Descriptor**: Initializes the HOG descriptor and sets up the default people detector.
+* **Detecting People**: The detectMultiScale function finds people in the image.
+* **Drawing Bounding Boxes**: For each detection, a bounding box is drawn around the detected individual.
+
+*Notes*
+* **Error Handling**: If the image fails to load, an error message is displayed.
+* **Output**: The processed image with bounding boxes is saved as output.jpg
+
+**Running the Code**
+1. Ensure your image path is correctly set in image_path.
+2. Run the code to detect the image:
+```python
+python your_script_name.py
+```
+3. Check output.jpg for the detection results.
+
+**Additional Information**
+The HOG + SVM combination is popular for real-time people detection but may have limitations in complex scenes. This setup provides a starting point for experimenting with HOG-based detection.
