@@ -206,7 +206,7 @@ def sift_feature_extraction(image_path1="4B_VENANCIO_MATCHING.jpg", image_path2=
 # Run the function
 sift_feature_extraction()
 ```
-# ** Image Segmentation using Watershed Algorithm**
+# **Image Segmentation using Watershed Algorithm**
 This Python script demonstrates how to perform image segmentation using the Watershed algorithm with OpenCV. The script processes an input image, identifies distinct regions, and visualizes the segmentation results by marking the boundaries in red.
 
 Requirements
