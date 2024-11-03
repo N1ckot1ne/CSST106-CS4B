@@ -3,7 +3,9 @@ This guide explains how to download and extract the COCO 2017 training dataset f
 
 **Steps to Download and Extract COCO 2017 Train Set**
 
-1. Create Directory.
+**1.** Create Directory.
+
 ```bash
 mkdir -p datasets/coco
 ```
+**2.** Download the Dataset
