@@ -115,3 +115,15 @@ plt.show()
 **Explanation**
 * **Image Conversion**: OpenCV loads images in BGR format, so we convert it to RGB for accurate display with Matplotlib.
 * **Display Settings**: plt.axis("off") hides the axes for a cleaner view of the image.
+
+# **Image Classification using TensorFlow and MobileNetV2**
+This guide demonstrates how to use a pre-trained MobileNetV2 model for image classification in TensorFlow. Although MobileNetV2 is not a YOLO model, it serves as a placeholder for quick object classification.
+
+**Requirements**
+* TensorFlow
+
+*Setup*
+1. Install TensorFlow
+```python
+pip install tensorflow
+```
