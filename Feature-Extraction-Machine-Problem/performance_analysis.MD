@@ -14,11 +14,9 @@ pip install opencv-python-headless numpy matplotlib
 ```
 **Usage**
 
-*Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the harris_corner_detection function.
-
-*Run the Script: Execute the script to display the original image alongside the processed image, which will have detected corners marked in red.
-
-*Example: 
+Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the harris_corner_detection function.
+Run the Script: Execute the script to display the original image alongside the processed image, which will have detected corners marked in red.
+Example: 
 
 ```python
 import cv2
@@ -67,9 +65,9 @@ Install using pip:
 pip install opencv-python-headless scikit-image matplotlib
 ```
 **Usage**
-*Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the hog_feature_extraction function.
-*Run the Script: Execute the script to display the original image alongside the image with visualized HOG features.
-*Example: 
+Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the hog_feature_extraction function.
+Run the Script: Execute the script to display the original image alongside the image with visualized HOG features.
+Example: 
 
 ``` python
 from skimage.feature import hog
@@ -119,9 +117,9 @@ pip install opencv-python-headless matplotlib
 
 **Usage**
 
-*Prepare Your Images: Ensure you have two images in your directory. Update the image paths in the orb_feature_matching function if they are named differently.
-*Run the Script: Execute the script to display the original images with matched keypoints.
-*Example:
+Prepare Your Images: Ensure you have two images in your directory. Update the image paths in the orb_feature_matching function if they are named differently.
+Run the Script: Execute the script to display the original images with matched keypoints.
+Example:
 
 ```python
 import cv2
@@ -172,9 +170,9 @@ Instalation:
 pip install opencv-python-headless matplotlib
 ```
 **Usage**
-* Prepare Your Images: Ensure you have two images in your directory. Update the image paths in the sift_feature_extraction function if they are named differently.
-* Run the Script: Execute the script to display the first image with SIFT keypoints highlighted.
-* Example:
+Prepare Your Images: Ensure you have two images in your directory. Update the image paths in the sift_feature_extraction function if they are named differently.
+Run the Script: Execute the script to display the first image with SIFT keypoints highlighted.
+Example:
 
 ```python
 import cv2
