@@ -93,3 +93,22 @@ else:
 
 **Additional Information**
 The HOG + SVM combination is popular for real-time people detection but may have limitations in complex scenes. This setup provides a starting point for experimenting with HOG-based detection.
+
+# **Displaying Output Image using Matplotlib**
+1. If you haven't installed OpenCV and Matplotlib, you can install them using pip:
+
+```python
+pip install opencv-python matplotlib
+```
+
+2. Load and Display the Image. This code snippet reads an image (saved as output.jpg), converts it to RGB, and displays it without axes using Matplotlib:
+```python
+from matplotlib import pyplot as plt
+import cv2
+
+# Load and display the output image
+image_output = cv2.imread("output.jpg")
+plt.imshow(cv2.cvtColor(image_output, cv2.COLOR_BGR2RGB))
+plt.axis("off")  # Hide axes
+plt.show()
+```
