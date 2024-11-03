@@ -14,11 +14,11 @@ pip install opencv-python-headless numpy matplotlib
 ```
 **Usage**
 
-* Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the harris_corner_detection function.
+*Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the harris_corner_detection function.
 
-* Run the Script: Execute the script to display the original image alongside the processed image, which will have detected corners marked in red.
+*Run the Script: Execute the script to display the original image alongside the processed image, which will have detected corners marked in red.
 
-* Example: 
+*Example: 
 
 ```python
 import cv2
