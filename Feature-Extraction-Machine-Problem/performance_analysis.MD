@@ -52,3 +52,54 @@ def harris_corner_detection(image_path="4B_VENANCIO_MATCHING.jpg"):
 # Run the function
 harris_corner_detection()
 ```
+
+# **HOG Feature Extraction**
+This Python script demonstrates how to perform Histogram of Oriented Gradients (HOG) feature extraction on an image using OpenCV and the skimage.feature library. HOG is a method commonly used for object detection and computer vision tasks, as it captures the structure or shape of an object by encoding gradients or changes in intensity.
+**Requirements**
+Install the required libraries before running the script:
+* OpenCV
+* scikit-image
+* Matplotlib
+
+Install using pip:
+
+```python
+pip install opencv-python-headless scikit-image matplotlib
+```
+**Usage**
+*Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the hog_feature_extraction function.
+*Run the Script: Execute the script to display the original image alongside the image with visualized HOG features.
+*Example: 
+
+```python
+from skimage.feature import hog
+import cv2
+import matplotlib.pyplot as plt
+
+def hog_feature_extraction(image_path="4B_VENANCIO_MATCHING.jpg"):
+    img = cv2.imread(image_path)
+    
+    # Check if the image loaded successfully
+    if img is None:
+        print(f"Error: Could not load image at path '{image_path}'. Please check the file path.")
+        return
+    
+    # Convert to grayscale
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    # Extract HOG features and HOG visualization
+    hog_features, hog_image = hog(gray, orientations=9, pixels_per_cell=(8, 8),
+                                  cells_per_block=(2, 2), visualize=True)
+
+    # Display original and HOG images
+    plt.figure(figsize=(10, 5))
+    plt.subplot(1, 2, 1), plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    plt.title('Original Image'), plt.axis('off')
+    plt.subplot(1, 2, 2), plt.imshow(hog_image, cmap='gray')
+    plt.title('HOG Features'), plt.axis('off')
+    plt.show()
+
+# Run the function
+hog_feature_extraction()
+
+'''
