@@ -88,10 +88,7 @@ else:
 
 **Running the Code**
 1. Ensure your image path is correctly set in image_path.
-2. Run the code to detect the image:
-```python
-python your_script_name.py
-```
+2. Run the code to detect the image
 3. Check output.jpg for the detection results.
 
 **Additional Information**
