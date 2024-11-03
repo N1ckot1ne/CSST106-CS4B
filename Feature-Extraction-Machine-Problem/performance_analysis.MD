@@ -71,7 +71,7 @@ pip install opencv-python-headless scikit-image matplotlib
 *Run the Script: Execute the script to display the original image alongside the image with visualized HOG features.
 *Example: 
 
-```python
+``` python
 from skimage.feature import hog
 import cv2
 import matplotlib.pyplot as plt
