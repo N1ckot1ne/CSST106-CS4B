@@ -194,3 +194,9 @@ print("Recall:", recall)
 * **Predicted Labels**: y_pred represents the predicted labels from your model.
 * **Precision**: The ratio of true positive predictions to the total predicted positives.
 * **Recall**: The ratio of true positive predictions to the total actual positives.
+
+**Output**
+```platintext
+Precision: 1.0
+Recall: 0.75
+```
