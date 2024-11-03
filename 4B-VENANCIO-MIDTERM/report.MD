@@ -203,8 +203,9 @@ Recall: 0.75
 # **Comparing YOLO to different algorithms**
 *When comparing object detection algorithms like HOG-SVM, YOLO, and SSD, several factors such as speed and accuracy come into play. HOG-SVM is a traditional method that excels in scenarios with simpler backgrounds and fewer objects. It generally exhibits lower accuracy on complex images compared to modern deep learning methods, but it is significantly faster due to its lower computational overhead. In contrast, YOLO (You Only Look Once) is designed for real-time processing, providing high-speed detections by treating object detection as a single regression problem, predicting bounding boxes and class probabilities simultaneously. Although YOLO can achieve high accuracy, especially with well-trained models on large datasets, it may struggle with small objects or dense environments. SSD (Single Shot MultiBox Detector) also offers a balance between speed and accuracy by utilizing a single deep learning network to predict multiple bounding boxes and class scores in one pass. While SSD typically outperforms HOG-SVM in accuracy, it may be slower than YOLO depending on the implementation and specific model architecture used. Ultimately, the choice between these algorithms depends on the specific requirements of the application, including the need for speed, the complexity of the scenes being analyzed, and the acceptable level of accuracy.*
 
+```markdown
 <video width="640" height="480" controls>
   <source src="https://youtu.be/L6sGGfnPsRE" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-
+```
