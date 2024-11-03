@@ -19,11 +19,12 @@ pip install opencv-python-headless numpy matplotlib
 * Run the Script: Execute the script to display the original image alongside the processed image, which will have detected corners marked in red.
 
 * Example: 
+
+```python
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-```python
 def harris_corner_detection(image_path="4B_VENANCIO_MATCHING.jpg"):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     img_copy = cv2.imread(image_path)
