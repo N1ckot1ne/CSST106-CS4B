@@ -41,3 +41,36 @@ rotated_image = cv2.warpAffine(image, rotation_matrix, (image.shape[1], image.sh
 ```
 
 # **3. Filtering Techniques**
+
+**Blurring**
+```python
+blurred_image = cv2.GaussianBlur(image, (5, 5), 0)
+```
+
+**Edge Detection**
+```python
+edges = cv2.Canny(image, 100, 200)
+```
+
+# **4. Scenario-Based Problem-Solving**
+```python
+# Resize
+scale_percent = 75
+resized_image = cv2.resize(image, (int(image.shape[1] * scale_percent / 100), int(image.shape[0] * scale_percent / 100)), interpolation=cv2.INTER_AREA)
+
+# Apply Gaussian blur
+blurred_resized_image = cv2.GaussianBlur(resized_image, (5, 5), 0)
+
+# Detect edges
+edges_resized_blurred = cv2.Canny(blurred_resized_image, 100, 200)
+```
+
+**Display Results**
+```python
+import matplotlib.pyplot as plt
+
+# Example to display an image
+plt.imshow(resized_image)
+plt.axis('off')
+plt.show()
+```
