@@ -158,4 +158,52 @@ def orb_feature_matching(image_path1="4B_VENANCIO_MATCHING.jpg", image_path2="sa
 # Run the function
 orb_feature_matching()
 ```
+# **SIFT Feature Extraction**
+This Python script demonstrates how to perform feature extraction using the SIFT (Scale-Invariant Feature Transform) algorithm. SIFT is a powerful technique for detecting and describing local features in images, making it widely used in various computer vision applications, including object recognition and image stitching.
 
+**Requirements**
+Before running the script, ensure that you have the following libraries:
+* OpenCV
+* Matplotlib
+
+Instalation:
+```python
+pip install opencv-python-headless matplotlib
+```
+**Usage**
+* Prepare Your Images: Ensure you have two images in your directory. Update the image paths in the sift_feature_extraction function if they are named differently.
+* Run the Script: Execute the script to display the first image with SIFT keypoints highlighted.
+* Example:
+
+```python
+import cv2
+import matplotlib.pyplot as plt
+
+def sift_feature_extraction(image_path1="4B_VENANCIO_MATCHING.jpg", image_path2="sample.jpg"):
+    img1 = cv2.imread(image_path1, cv2.IMREAD_GRAYSCALE)
+    img2 = cv2.imread(image_path2, cv2.IMREAD_GRAYSCALE)
+
+    if img1 is None or img2 is None:
+        print("Error: Could not load one or both images. Please check the file paths.")
+        return
+
+    # Initialize SIFT detector
+    sift = cv2.SIFT_create()
+
+    # Detect keypoints and descriptors with SIFT
+    kp_sift1, des_sift1 = sift.detectAndCompute(img1, None)
+    kp_sift2, des_sift2 = sift.detectAndCompute(img2, None)
+
+    # Draw SIFT keypoints on the first image
+    img_sift1 = cv2.drawKeypoints(img1, kp_sift1, None, flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
+    # Display SIFT keypoints for the first image
+    plt.figure(figsize=(10, 5))
+    plt.imshow(img_sift1, cmap='gray')
+    plt.title('SIFT Keypoints')
+    plt.axis('off')
+    plt.show()
+
+# Run the function
+sift_feature_extraction()
+```
