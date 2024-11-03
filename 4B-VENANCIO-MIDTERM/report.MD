@@ -24,3 +24,10 @@ unzip -q datasets/coco/train2017.zip -d datasets/coco/
 This will extract all images in the train2017 set to datasets/coco/train2017/.
 
 **Directory Structure.**After completing these steps, your directory structure should look like this:
+
+```python
+datasets/
+└── coco/
+    ├── train2017.zip       # Original zip file (optional to keep)
+    └── train2017/          # Extracted images
+```
