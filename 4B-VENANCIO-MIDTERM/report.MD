@@ -212,12 +212,6 @@ Here is a brief introduction to my project.
 You can watch the video demonstration below:
 
 ### YouTube Video
-<a href="https://www.youtube.com/watch?v=your_video_id" target="_blank">
-  <img src="https://img.youtube.com/vi/your_video_id/0.jpg" alt="Your Video Title" style="width:640px;"/>
+<a href="https://youtu.be/L6sGGfnPsRE" target="_blank">
+  <img src="https://img.youtube.com/vi/L6sGGfnPsRE/0.jpg" alt="Your Video Title" style="width:640px;"/>
 </a>
-
-### Direct MP4 Video
-<video width="640" height="480" controls>
-  <source src="https://youtu.be/L6sGGfnPsRE" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
