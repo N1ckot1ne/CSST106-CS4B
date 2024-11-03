@@ -206,3 +206,59 @@ def sift_feature_extraction(image_path1="4B_VENANCIO_MATCHING.jpg", image_path2=
 # Run the function
 sift_feature_extraction()
 ```
+# ** Image Segmentation using Watershed Algorithm**
+This Python script demonstrates how to perform image segmentation using the Watershed algorithm with OpenCV. The script processes an input image, identifies distinct regions, and visualizes the segmentation results by marking the boundaries in red.
+
+Requirements
+Ensure the following libraries are installed before running the script:
+
+* OpenCV
+* NumPy
+* Matplotlib
+
+Usage
+Prepare Your Image: Save the image you want to analyze in the same directory as the script, or update the file path in the watershed_segmentation function.
+Run the Script: Execute the script to display the original image with the segmented regions highlighted.
+
+**Code**
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+
+def watershed_segmentation(image_path="4B_VENANCIO_MATCHING.jpg"):
+    img = cv2.imread(image_path)
+    
+    if img is None:
+        print(f"Error: Could not load image at path '{image_path}'. Please check the file path.")
+        return
+    
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    ret, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
+
+    kernel = np.ones((3, 3), np.uint8)
+    opening = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel, iterations=2)
+
+    sure_bg = cv2.dilate(opening, kernel, iterations=3)
+    dist_transform = cv2.distanceTransform(opening, cv2.DIST_L2, 5)
+    ret, sure_fg = cv2.threshold(dist_transform, 0.7 * dist_transform.max(), 255, 0)
+
+    sure_fg = np.uint8(sure_fg)
+    unknown = cv2.subtract(sure_bg, sure_fg)
+
+    ret, markers = cv2.connectedComponents(sure_fg)
+    markers = markers + 1
+    markers[unknown == 255] = 0
+
+    markers = cv2.watershed(img, markers)
+    img[markers == -1] = [255, 0, 0]
+
+    plt.figure(figsize=(10, 5))
+    plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+    plt.title('Watershed Segmentation'), plt.axis('off')
+    plt.show()
+
+# Run the function
+watershed_segmentation()
+```
