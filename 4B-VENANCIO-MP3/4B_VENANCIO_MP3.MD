@@ -20,3 +20,8 @@ This project demonstrates the use of SIFT, AKAZE, and ORB feature detection and 
 
 * sample1.jpg and sample2.jpg: Input images to perform feature matching and alignment on.
 * feature_matching.py: Main script with implementations for SIFT, AKAZE, and ORB feature extraction, descriptor computation, and feature * matching. It includes visualization of keypoints and matches and image alignment.
+
+**Usage**
+
+1. Ensure all required packages are installed.
+2. Place your images in the same directory as the script.
