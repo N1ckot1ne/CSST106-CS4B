@@ -127,3 +127,34 @@ This guide demonstrates how to use a pre-trained MobileNetV2 model for image cla
 ```python
 pip install tensorflow
 ```
+2. Download or Prepare an Input Image. Make sure you have an image to classify, saved at datasets/coco/processed/000000000009.jpg, or update img_path in the code with the path to your own image.
+
+**How it Works**
+This code loads a pre-trained MobileNetV2 model with ImageNet weights and uses it to classify an input image. MobileNetV2 is optimized for mobile and embedded vision applications, and it’s useful for quick inference on common objects.
+
+```python
+import tensorflow as tf
+from tensorflow.keras.applications import MobileNetV2
+
+# Load pre-trained MobileNetV2 model
+model = MobileNetV2(weights="imagenet")
+
+# Load and preprocess the input image
+img_path = "datasets/coco/processed/000000000009.jpg"
+image = tf.keras.preprocessing.image.load_img(img_path, target_size=(224, 224))
+input_arr = tf.keras.preprocessing.image.img_to_array(image)
+input_arr = tf.expand_dims(input_arr, axis=0)  # Create batch dimension
+
+# Perform classification
+predictions = model.predict(input_arr)
+print("Predictions:", tf.keras.applications.mobilenet_v2.decode_predictions(predictions, top=3))
+```
+
+**Key Points**
+* **Image Preprocessing**: The image is resized to (224, 224) pixels and expanded to create a batch dimension.
+* **Classification**: The model predicts the top 3 probable classes for the object in the image using the decode_predictions function.
+
+**Output**
+```plaintext
+Predictions: [[('n03291819', 'envelope', 0.16275658), ('n03938244', 'pillow', 0.13262008), ('n03347037', 'fire_screen', 0.058112532)]]
+```
