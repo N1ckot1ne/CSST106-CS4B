@@ -158,3 +158,39 @@ print("Predictions:", tf.keras.applications.mobilenet_v2.decode_predictions(pred
 ```plaintext
 Predictions: [[('n03291819', 'envelope', 0.16275658), ('n03938244', 'pillow', 0.13262008), ('n03347037', 'fire_screen', 0.058112532)]]
 ```
+
+# **Precision and Recall Calculation using scikit-learn**
+This guide demonstrates how to calculate precision and recall for a binary classification task using the scikit-learn library.
+
+**Requirements**
+* scikit-learn
+
+*Setup*
+1. Instal scikit-learn
+```python
+pip install scikit-learn
+```
+**How it Works**
+This code snippet calculates the precision and recall of predictions compared to actual ground truth labels.
+
+```python
+from sklearn.metrics import precision_score, recall_score
+
+# Ground truth labels
+y_true = [1, 0, 1, 1, 0, 1]  # Actual labels
+# Predicted labels
+y_pred = [1, 0, 1, 0, 0, 1]  # Model predictions
+
+# Calculate precision and recall
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+
+print("Precision:", precision)
+print("Recall:", recall)
+```
+
+**Key Points**
+* **Ground Truth Labels**: y_true represents the actual labels for your dataset.
+* **Predicted Labels**: y_pred represents the predicted labels from your model.
+* **Precision**: The ratio of true positive predictions to the total predicted positives.
+* **Recall**: The ratio of true positive predictions to the total actual positives.
