@@ -9,3 +9,14 @@ This project demonstrates the use of SIFT, AKAZE, and ORB feature detection and 
 * Usage
 * Feature Detection and Matching Algorithms
 *Conclusion
+
+**Requirements**
+* Python 3.x
+* OpenCV (with contrib modules for SIFT)
+* NumPy
+* Matplotlib
+
+**Project Structure**
+
+* sample1.jpg and sample2.jpg: Input images to perform feature matching and alignment on.
+* feature_matching.py: Main script with implementations for SIFT, AKAZE, and ORB feature extraction, descriptor computation, and feature * matching. It includes visualization of keypoints and matches and image alignment.
