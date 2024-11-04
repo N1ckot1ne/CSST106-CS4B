@@ -9,7 +9,7 @@ This guide explains how to download and extract the COCO 2017 training dataset f
 mkdir -p datasets/coco
 ```
 
-**2.  Download the Dataset.** Use curl to download the COCO 2017 training data (train2017.zip) into the datasets/coco directory:
+**2. Download the Dataset.** Use curl to download the COCO 2017 training data (train2017.zip) into the datasets/coco directory:
 
 ```bash
 curl -L "http://images.cocodataset.org/zips/train2017.zip" -o datasets/coco/train2017.zip
